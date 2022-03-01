@@ -1,14 +1,17 @@
 package com.example.webapp.model;
 
+
+
+
+
+
 import lombok.Data;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "Pessoa")
-@Data
 public class Pessoa {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @JoinColumn(name = "id_ID", nullable = false)
