@@ -1,5 +1,10 @@
 package com.example.webapp.model;
 
+
+
+
+
+
 import lombok.Data;
 
 import javax.persistence.*;

@@ -20,12 +20,6 @@ public class PessoasController {
 
     @ResponseBody
     @GetMapping("/")
-    public String hellowordl(){
-        return "Hello World!";
-    }
-
-    @ResponseBody
-    @GetMapping()
     public List<Pessoa> getPessoas() {
         return pessoasUseCases.pegarTodasAsPessoas();
     }
