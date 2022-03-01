@@ -17,6 +17,7 @@ public class PessoaUseCases implements PessoaUseCasesImpl {
     @Override
     public List<Pessoa> findAll() {
         return pessoaRepo.findAll();
+
     }
 
     @Override
