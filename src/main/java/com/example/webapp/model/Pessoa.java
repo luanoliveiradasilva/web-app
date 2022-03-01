@@ -11,7 +11,6 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "Pessoa")
-@Data
 public class Pessoa {
 
     @Id
