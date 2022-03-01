@@ -12,7 +12,6 @@ import javax.persistence.*;
 @Entity
 @Table(name = "Pessoa")
 public class Pessoa {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @JoinColumn(name = "id_ID", nullable = false)
