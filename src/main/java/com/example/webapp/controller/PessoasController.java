@@ -21,6 +21,7 @@ public class PessoasController {
     }
 
     @ResponseBody
+    @CrossOrigin
     @GetMapping(value = "/formulario")
     public ResponseEntity<List<Pessoa>> getPessoas() {
         var pessoa = pessoasUseCases.findAll();
@@ -28,6 +29,7 @@ public class PessoasController {
     }
 
     @ResponseBody
+    @CrossOrigin
     @PostMapping(value = "/cadastros")
     public ResponseEntity<Pessoa> postPessoas(
             @RequestBody Pessoa pessoa) {
