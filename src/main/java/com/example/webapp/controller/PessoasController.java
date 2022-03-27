@@ -32,7 +32,7 @@ public class PessoasController {
     @CrossOrigin
     @PostMapping(value = "/cadastros")
     public ResponseEntity<Pessoa> postPessoas(
-            @RequestBody Pessoa pessoa) {
+            @RequestBody Pessoa pessoa) throws Exception {
         var pessoaUse = pessoasUseCases.postAll(pessoa);
         return ResponseEntity.ok().body(pessoaUse);
     }
