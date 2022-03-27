@@ -8,12 +8,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class PessoaUseCases{
+public class PessoaUseCases {
 
-    private PessoaRepo pessoaRepo;
+    private final PessoaRepo pessoaRepo;
 
     @Autowired
-    public PessoaUseCases(PessoaRepo pessoaRepo){
+    public PessoaUseCases(PessoaRepo pessoaRepo) {
         this.pessoaRepo = pessoaRepo;
     }
 
@@ -21,8 +21,10 @@ public class PessoaUseCases{
         return pessoaRepo.findAll();
     }
 
-    public Pessoa postAll(Pessoa pessoas) {
-        return pessoaRepo.save(pessoas);
+    public Pessoa postAll(Pessoa pessoas) throws Exception {
+        if (pessoas != null) {
+            return pessoaRepo.save(pessoas);
+        } throw new Exception("Não foi possível cadastrar usuário");
     }
 
 
