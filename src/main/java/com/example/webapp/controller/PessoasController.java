@@ -21,7 +21,6 @@ public class PessoasController {
         this.pessoasUseCases = pessoasUseCases;
     }
 
-
     @CrossOrigin
     @GetMapping(value = "/formulario")
     public ResponseEntity getPessoas() {
