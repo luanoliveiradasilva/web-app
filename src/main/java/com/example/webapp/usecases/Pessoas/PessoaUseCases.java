@@ -21,10 +21,8 @@ public class PessoaUseCases {
         return pessoaRepo.findAll();
     }
 
-    public Pessoa postAll(Pessoa pessoas) throws Exception {
-        if (pessoas != null) {
-            return pessoaRepo.save(pessoas);
-        } throw new Exception("Não foi possível cadastrar usuário");
+    public Pessoa postAll(Pessoa pessoas){
+        return pessoaRepo.save(pessoas);
     }
 
 
